@@ -1,0 +1,1290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" lang="pt-br" dir="ltr"
+    prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+    <meta charset="utf-8">
+    <script
+        type="text/javascript">(window.NREUM || (NREUM = {})).init = { ajax: { deny_list: ["bam.nr-data.net"] } }; (window.NREUM || (NREUM = {})).loader_config = { licenseKey: "a41effcae8", applicationID: "7080079" }; window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var i = e[n] = { exports: {} }; t[n][0].call(i.exports, function (e) { var i = t[n][1][e]; return r(i || e) }, i, i.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < n.length; i++)r(n[i]); return r }({ 1: [function (t, e, n) { function r() { } function i(t, e, n, r) { return function () { return s.recordSupportability("API/" + e + "/called"), o(t + e, [u.now()].concat(c(arguments)), n ? null : this, r), n ? void 0 : this } } var o = t("handle"), a = t(9), c = t(10), f = t("ee").get("tracer"), u = t("loader"), s = t(4), d = NREUM; "undefined" == typeof window.newrelic && (newrelic = d); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", v = l + "ixn-"; a(p, function (t, e) { d[e] = i(l, e, !0, "api") }), d.addPageAction = i(l, "addPageAction", !0), d.setCurrentRouteName = i(l, "routeName", !0), e.exports = newrelic, d.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (t, e) { var n = {}, r = this, i = "function" == typeof e; return o(v + "tracer", [u.now(), t, n], r), function () { if (f.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], n), i) try { return e.apply(this, arguments) } catch (t) { throw f.emit("fn-err", [arguments, this, t], n), t } finally { f.emit("fn-end", [u.now()], n) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) { m[e] = i(v, e) }), newrelic.noticeError = function (t, e) { "string" == typeof t && (t = new Error(t)), s.recordSupportability("API/noticeError/called"), o("err", [t, u.now(), !1, e]) } }, {}], 2: [function (t, e, n) { function r(t) { if (NREUM.init) { for (var e = NREUM.init, n = t.split("."), r = 0; r < n.length - 1; r++)if (e = e[n[r]], "object" != typeof e) return; return e = e[n[n.length - 1]] } } e.exports = { getConfiguration: r } }, {}], 3: [function (t, e, n) { var r = !1; try { var i = Object.defineProperty({}, "passive", { get: function () { r = !0 } }); window.addEventListener("testPassive", null, i), window.removeEventListener("testPassive", null, i) } catch (o) { } e.exports = function (t) { return r ? { passive: !0, capture: !!t } : !!t } }, {}], 4: [function (t, e, n) { function r(t, e) { var n = [a, t, { name: t }, e]; return o("storeMetric", n, null, "api"), n } function i(t, e) { var n = [c, t, { name: t }, e]; return o("storeEventMetrics", n, null, "api"), n } var o = t("handle"), a = "sm", c = "cm"; e.exports = { constants: { SUPPORTABILITY_METRIC: a, CUSTOM_METRIC: c }, recordSupportability: r, recordCustom: i } }, {}], 5: [function (t, e, n) { function r() { return c.exists && performance.now ? Math.round(performance.now()) : (o = Math.max((new Date).getTime(), o)) - a } function i() { return o } var o = (new Date).getTime(), a = o, c = t(11); e.exports = r, e.exports.offset = a, e.exports.getLastTimestamp = i }, {}], 6: [function (t, e, n) { function r(t, e) { var n = t.getEntries(); n.forEach(function (t) { "first-paint" === t.name ? l("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && l("timing", ["fcp", Math.floor(t.startTime)]) }) } function i(t, e) { var n = t.getEntries(); if (n.length > 0) { var r = n[n.length - 1]; if (u && u < r.startTime) return; var i = [r], o = a({}); o && i.push(o), l("lcp", i) } } function o(t) { t.getEntries().forEach(function (t) { t.hadRecentInput || l("cls", [t]) }) } function a(t) { var e = navigator.connection || navigator.mozConnection || navigator.webkitConnection; if (e) return e.type && (t["net-type"] = e.type), e.effectiveType && (t["net-etype"] = e.effectiveType), e.rtt && (t["net-rtt"] = e.rtt), e.downlink && (t["net-dlink"] = e.downlink), t } function c(t) { if (t instanceof y && !w) { var e = Math.round(t.timeStamp), n = { type: t.type }; a(n), e <= v.now() ? n.fid = v.now() - e : e > v.offset && e <= Date.now() ? (e -= v.offset, n.fid = v.now() - e) : e = v.now(), w = !0, l("timing", ["fi", e, n]) } } function f(t) { "hidden" === t && (u = v.now(), l("pageHide", [u])) } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var u, s, d, p, l = t("handle"), v = t("loader"), m = t(8), g = t(3), y = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { s = new PerformanceObserver(r); try { s.observe({ entryTypes: ["paint"] }) } catch (h) { } d = new PerformanceObserver(i); try { d.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (h) { } p = new PerformanceObserver(o); try { p.observe({ type: "layout-shift", buffered: !0 }) } catch (h) { } } if ("addEventListener" in document) { var w = !1, b = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; b.forEach(function (t) { document.addEventListener(t, c, g(!1)) }) } m(f) } }, {}], 7: [function (t, e, n) { function r(t, e) { if (!i) return !1; if (t !== i) return !1; if (!e) return !0; if (!o) return !1; for (var n = o.split("."), r = e.split("."), a = 0; a < r.length; a++)if (r[a] !== n[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var c = navigator.userAgent, f = c.match(a); f && c.indexOf("Chrome") === -1 && c.indexOf("Chromium") === -1 && (i = "Safari", o = f[1]) } e.exports = { agent: i, version: o, match: r } }, {}], 8: [function (t, e, n) { function r(t) { function e() { t(c && document[c] ? document[c] : document[o] ? "hidden" : "visible") } "addEventListener" in document && a && document.addEventListener(a, e, i(!1)) } var i = t(3); e.exports = r; var o, a, c; "undefined" != typeof document.hidden ? (o = "hidden", a = "visibilitychange", c = "visibilityState") : "undefined" != typeof document.msHidden ? (o = "msHidden", a = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (o = "webkitHidden", a = "webkitvisibilitychange", c = "webkitVisibilityState") }, {}], 9: [function (t, e, n) { function r(t, e) { var n = [], r = "", o = 0; for (r in t) i.call(t, r) && (n[o] = e(r, t[r]), o += 1); return n } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], 10: [function (t, e, n) { function r(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, i = n - e || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = t[e + r]; return o } e.exports = r }, {}], 11: [function (t, e, n) { e.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (t, e, n) { function r() { } function i(t) { function e(t) { return t && t instanceof r ? t : t ? u(t, f, a) : a() } function n(n, r, i, o, a) { if (a !== !1 && (a = !0), !l.aborted || o) { t && a && t(n, r, i); for (var c = e(i), f = m(n), u = f.length, s = 0; s < u; s++)f[s].apply(c, r); var p = d[w[n]]; return p && p.push([b, n, r, c]), c } } function o(t, e) { h[t] = m(t).concat(e) } function v(t, e) { var n = h[t]; if (n) for (var r = 0; r < n.length; r++)n[r] === e && n.splice(r, 1) } function m(t) { return h[t] || [] } function g(t) { return p[t] = p[t] || i(n) } function y(t, e) { l.aborted || s(t, function (t, n) { e = e || "feature", w[n] = e, e in d || (d[e] = []) }) } var h = {}, w = {}, b = { on: o, addEventListener: o, removeEventListener: v, emit: n, get: g, listeners: m, context: e, buffer: y, abort: c, aborted: !1 }; return b } function o(t) { return u(t, f, a) } function a() { return new r } function c() { (d.api || d.feature) && (l.aborted = !0, d = l.backlog = {}) } var f = "nr@context", u = t("gos"), s = t(9), d = {}, p = {}, l = e.exports = i(); e.exports.getOrSetContext = o, l.backlog = d }, {}], gos: [function (t, e, n) { function r(t, e, n) { if (i.call(t, e)) return t[e]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return t[e] = r, r } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], handle: [function (t, e, n) { function r(t, e, n, r) { i.buffer([t], r), i.emit(t, e, n) } var i = t("ee").get("handle"); e.exports = r, r.ee = i }, {}], id: [function (t, e, n) { function r(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, o, function () { return i++ }) } var i = 1, o = "nr@id", a = t("gos"); e.exports = r }, {}], loader: [function (t, e, n) { function r() { if (!M++) { var t = T.info = NREUM.info, e = m.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort(); f(x, function (e, n) { t[e] || (t[e] = n) }); var n = a(); c("mark", ["onload", n + T.offset], null, "api"), c("timing", ["load", n]); var r = m.createElement("script"); 0 === t.agent.indexOf("http://") || 0 === t.agent.indexOf("https://") ? r.src = t.agent : r.src = l + "://" + t.agent, e.parentNode.insertBefore(r, e) } } function i() { "complete" === m.readyState && o() } function o() { c("mark", ["domContent", a() + T.offset], null, "api") } var a = t(5), c = t("handle"), f = t(9), u = t("ee"), s = t(7), d = t(2), p = t(3), l = d.getConfiguration("ssl") === !1 ? "http" : "https", v = window, m = v.document, g = "addEventListener", y = "attachEvent", h = v.XMLHttpRequest, w = h && h.prototype, b = !1; NREUM.o = { ST: setTimeout, SI: v.setImmediate, CT: clearTimeout, XHR: h, REQ: v.Request, EV: v.Event, PR: v.Promise, MO: v.MutationObserver }; var E = "" + location, x = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1216.min.js" }, O = h && w && w[g] && !/CriOS/.test(navigator.userAgent), T = e.exports = { offset: a.getLastTimestamp(), now: a, origin: E, features: {}, xhrWrappable: O, userAgent: s, disabled: b }; if (!b) { t(1), t(6), m[g] ? (m[g]("DOMContentLoaded", o, p(!1)), v[g]("load", r, p(!1))) : (m[y]("onreadystatechange", i), v[y]("onload", r)), c("mark", ["firstbyte", a.getLastTimestamp()], null, "api"); var M = 0 } }, {}], "wrap-function": [function (t, e, n) { function r(t, e) { function n(e, n, r, f, u) { function nrWrapper() { var o, a, s, p; try { a = this, o = d(arguments), s = "function" == typeof r ? r(o, a) : r || {} } catch (l) { i([l, "", [o, a, f], s], t) } c(n + "start", [o, a, f], s, u); try { return p = e.apply(a, o) } catch (v) { throw c(n + "err", [o, a, v], s, u), v } finally { c(n + "end", [o, a, p], s, u) } } return a(e) ? e : (n || (n = ""), nrWrapper[p] = e, o(e, nrWrapper, t), nrWrapper) } function r(t, e, r, i, o) { r || (r = ""); var c, f, u, s = "-" === r.charAt(0); for (u = 0; u < e.length; u++)f = e[u], c = t[f], a(c) || (t[f] = n(c, s ? f + r : r, i, f, o)) } function c(n, r, o, a) { if (!v || e) { var c = v; v = !0; try { t.emit(n, r, o, e, a) } catch (f) { i([f, n, r, o], t) } v = c } } return t || (t = s), n.inPlace = r, n.flag = p, n } function i(t, e) { e || (e = s); try { e.emit("internal-error", t) } catch (n) { } } function o(t, e, n) { if (Object.defineProperty && Object.keys) try { var r = Object.keys(t); return r.forEach(function (n) { Object.defineProperty(e, n, { get: function () { return t[n] }, set: function (e) { return t[n] = e, e } }) }), e } catch (o) { i([o], n) } for (var a in t) l.call(t, a) && (e[a] = t[a]); return e } function a(t) { return !(t && t instanceof Function && t.apply && !t[p]) } function c(t, e) { var n = e(t); return n[p] = t, o(t, n, s), n } function f(t, e, n) { var r = t[e]; t[e] = c(r, n) } function u() { for (var t = arguments.length, e = new Array(t), n = 0; n < t; ++n)e[n] = arguments[n]; return e } var s = t("ee"), d = t(10), p = "nr@original", l = Object.prototype.hasOwnProperty, v = !1; e.exports = r, e.exports.wrapFunction = c, e.exports.wrapInPlace = f, e.exports.argsToArray = u }, {}] }, {}, ["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if IE]><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="https://eqseed.com/sites/all/themes/eqseed/favicon.ico"
+        type="image/vnd.microsoft.icon" />
+    <meta name="description"
+        content="Investir em startups brasileiras. Investimento anjo no Brasil com EqSeed equity crowdfunding." />
+    <link rel="canonical" href="https://eqseed.com/investir" />
+    <link rel="shortlink" href="https://eqseed.com/node/55538" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://eqseed.com/investir" />
+    <meta property="og:title" content="Investir" />
+    <meta property="og:description"
+        content="Investir em startups brasileiras. Investimento anjo no Brasil com EqSeed equity crowdfunding." />
+    <meta property="og:updated_time" content="2022-09-19T11:52:32-03:00" />
+    <meta property="og:image" content="https://eqseed.com/sites/default/files/pages/eqseed-investir-hero.jpg" />
+    <meta property="article:published_time" content="2017-05-04T07:22:57-03:00" />
+    <meta property="article:modified_time" content="2022-09-19T11:52:32-03:00" />
+    <meta name="google-site-verification" content="H-R9Xh6HwffwahMdaLTh058iEl-jydp3Tx44xZJv4Nw" />
+    <title>Investir | EqSeed</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;700&display=swap');
+    </style>
+    <link type="text/css" rel="stylesheet"
+        href="/sites/default/files/advagg_css/css__9cWqptSUNYq5YedfIwh33VxtugFVWjDdEsblT8GhLKI__quUjyhSfbEukHj8a0hYvzm9VTmPALmSZvA0xfM_Oxzo__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.css"
+        media="all" />
+    <link type="text/css" rel="stylesheet"
+        href="/sites/default/files/advagg_css/css__0Yc-gqjBJb7SBbZxL11sAID2oiHcT_FEDd2n-GCQ1sw__74HYwCQz0VSnBq3meAgn5iJy7BdXYecW7L_aKOfAKE8__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.css"
+        media="all" />
+    <link type="text/css" rel="stylesheet"
+        href="/sites/default/files/advagg_css/css__54t0Mrc6OGsA_CQdzFI9BEzzyxYBiWxmeMhpDycEeEQ__gJBLA_bjQWQXG1t0mtp1Bzuyraq9mK4Z-HGd1K23wXk__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.css"
+        media="all" />
+    <link type="text/css" rel="stylesheet"
+        href="/sites/default/files/advagg_css/css__QjyOFUABHRAK20ZyhxcvnKfvxAwp99lKyr0z2vb-Gvs__eMydWcknmKAAFgpfo1PczMKQY7HrNY3wH9VV3WM1Vu4__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.css"
+        media="all" />
+    <!-- HTML5 element support for IE6-8 -->
+    <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+    <script type="text/javascript" defer="defer" async="async"
+        src="https://cdn.rawgit.com/bramstein/fontfaceobserver/v2.3.0/fontfaceobserver.js"></script>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__pz_sXMUiOU3LRyDWuAEtn_5pckexgU9DBz66fga6q7E__zA6TV7Hghh-ZQoYPGcGm6rg-J4-ge-Ou_1k5cWCzTng__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"></script>
+    <script type="text/javascript">
+< !--//-->
+    < ![CDATA[//><!--
+var fonts = document.cookie.split("advaggf"); for (var key in fonts) { var font = fonts[key].split("="), pos = font[0].indexOf("ont_"); -1 !== pos && (window.document.documentElement.className += " " + font[0].substr(4).replace(/[^a-zA-Z0-9\-]/g, "")) }
+//--><!]]>
+    </script>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__I-7X3xp_ziDHJgIi_am-HsAkiVQSzB0fazsJroyODDQ__NlUJgH4KoaYTazfnHzyXocxia5IeL3oGicjWXeKnI-4__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"></script>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__ooaB5UBSD7z6q9aOoX7eHLMjI3bnqyiNdiva6EpZZaE___UWuk7Sr_EovY8GOpIqpLLofwYwTGJWMP8E6cyfAJ_0__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"></script>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__ppjevWSq0WCgLVJzzSLB5AF9UNZ3mtEEP26Bd0qmTy4__wdkmtCtFoxsHxi9Aw4Chyjrsk2Wq3W8tT0vOabX8lY4__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"></script>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__LNtDTnxW1eP59eWSal8ywbnXL0Bow0sjjuPUX8OoOQs__3PWqcqVSfFtquozXKihqARQj8813kcIuthS3nED_IxU__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"></script>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__HxTbhN-HTG8H6pU8ZNTXLhmTeg8fhzG_sbeVLz0gBqU__XVOZrC-l1s__UWsCYhSQQTfxp8UqxArG0ecVQR3p0aY__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"
+        defer="defer" async="async"></script>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__RXfG0_S6A5ctVvkjkW0quo7UmP7slXDWSJ5pvgrrLDg__8qkIVdj_1w10Je1ifjDAhzD45RmxrxwSMem_DX7TMrw__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"></script>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__QfScGN0Dhx1kIOtSNnx8idQWtM1WT6jjvDW_2HlIFRI__hkxcPpG17dB4aqZuHywGQMrD349eRN7ZNnFK7qqRzqs__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"></script>
+    <script type="text/javascript">
+
+                jQuery.extend(Drupal.settings, { "basePath": "\/", "pathPrefix": "", "setHasJsCookie": 0, "ajaxPageState": { "theme": "eqseed", "theme_token": "YgTRouSbkKsyFokGwY2JquKfQ2zFNQ2f8r92EP7KkcQ", "jquery_version": "1.9", "css": { "modules\/system\/system.base.css": 1, "sites\/all\/modules\/date\/date_api\/date.css": 1, "sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css": 1, "modules\/field\/theme\/field.css": 1, "sites\/all\/modules\/logintoboggan\/logintoboggan.css": 1, "modules\/node\/node.css": 1, "sites\/all\/modules\/extlink\/extlink.css": 1, "sites\/all\/modules\/views\/css\/views.css": 1, "sites\/all\/modules\/ctools\/css\/ctools.css": 1, "sites\/all\/libraries\/fancybox\/source\/jquery.fancybox.css": 1, "modules\/locale\/locale.css": 1, "sites\/all\/modules\/eu_cookie_compliance\/css\/eu_cookie_compliance.bare.css": 1, "sites\/all\/themes\/eqseed\/css\/bootstrap.css": 1, "sites\/all\/themes\/eqseed\/css\/style.css": 1, "sites\/all\/themes\/eqseed\/css\/slick.css": 1, "sites\/all\/themes\/eqseed\/css\/slick-theme.css": 1, "sites\/all\/themes\/eqseed\/all.css": 1, "sites\/all\/themes\/eqseed\/css\/eqseed.css": 1, "sites\/all\/themes\/eqseed\/css\/learn.css": 1, "sites\/all\/themes\/eqseed\/css\/lity.min.css": 1, "sites\/all\/themes\/eqseed\/css\/font-awesome.min.css": 1 }, "js": { "sites\/all\/modules\/eu_cookie_compliance\/js\/eu_cookie_compliance.js": 1, "sites\/all\/themes\/bootstrap\/js\/bootstrap.js": 1, "https:\/\/cdn.rawgit.com\/bramstein\/fontfaceobserver\/v2.3.0\/fontfaceobserver.js": 1, "public:\/\/google_tag\/language\/google_tag.pt-br.script.js": 1, "sites\/all\/modules\/jquery_update\/replace\/jquery\/1.9\/jquery.min.js": 1, "misc\/jquery-extend-3.4.0.js": 1, "misc\/jquery-html-prefilter-3.5.0-backport.js": 1, "misc\/jquery.once.js": 1, "misc\/drupal.js": 1, "sites\/all\/modules\/eu_cookie_compliance\/js\/jquery.cookie-1.4.1.min.js": 1, "sites\/all\/modules\/jquery_update\/replace\/misc\/jquery.form.min.js": 1, "misc\/ajax.js": 1, "sites\/all\/modules\/jquery_update\/js\/jquery_update.js": 1, "sites\/all\/modules\/extlink\/extlink.js": 1, "public:\/\/languages\/pt-br_xXMDzIQzNWIFTnOcEtfdWrkSspofkPtkOYmC09tfkoI.js": 1, "sites\/all\/modules\/fancybox\/fancybox.js": 1, "sites\/all\/libraries\/fancybox\/source\/jquery.fancybox.pack.js": 1, "sites\/all\/libraries\/fancybox\/lib\/jquery.mousewheel-3.0.6.pack.js": 1, "sites\/default\/modules\/persistent_url_parameters\/js\/jquery.cookie.js": 1, "sites\/default\/modules\/persistent_url_parameters\/js\/persistent_url_parameters.js": 1, "sites\/all\/modules\/prevent_js_alerts\/prevent_js_alerts.js": 1, "sites\/all\/modules\/ctools\/js\/auto-submit.js": 1, "sites\/all\/modules\/views_load_more\/views_load_more.js": 1, "sites\/all\/modules\/views\/js\/base.js": 1, "sites\/all\/themes\/bootstrap\/js\/misc\/_progress.js": 1, "sites\/all\/modules\/views\/js\/ajax_view.js": 1, "sites\/all\/modules\/advagg\/advagg_font\/advagg_font.js": 1, "sites\/all\/themes\/eqseed\/js\/ie10-viewport-bug-workaround.js": 1, "sites\/all\/themes\/eqseed\/js\/readmore.min.js": 1, "sites\/all\/themes\/eqseed\/js\/lity.min.js": 1, "sites\/all\/themes\/eqseed\/js\/jquery.matchHeight.js": 1, "sites\/all\/themes\/eqseed\/js\/masonry.pkgd.min.js": 1, "sites\/all\/themes\/eqseed\/js\/svgxuse.js": 1, "sites\/all\/themes\/eqseed\/js\/slick.min.js": 1, "sites\/all\/themes\/eqseed\/js\/eqseed.js": 1, "sites\/all\/themes\/eqseed\/js\/bootstrap.min.js": 1, "sites\/all\/themes\/bootstrap\/js\/modules\/views\/js\/ajax_view.js": 1, "sites\/all\/themes\/bootstrap\/js\/misc\/ajax.js": 1 } }, "fancybox": { "options": { "padding": 10, "width": 425, "height": 355 } }, "persistent_url_parameters": { "list": "utm_source|utm_medium|utm_campaign|utm_term|utm_content" }, "prevent_js_alerts": { "module_path": "sites\/all\/modules\/prevent_js_alerts" }, "urlIsAjaxTrusted": { "\/investir": true, "\/views\/ajax": true }, "views": { "ajax_path": "\/views\/ajax", "ajaxViews": { "views_dom_id:c2616745493f8c1ccc4989eefce7c8d3": { "view_name": "projects", "view_display_id": "block_1", "view_args": "", "view_path": "node\/55538", "view_base_path": "investir", "view_dom_id": "c2616745493f8c1ccc4989eefce7c8d3", "pager_element": 0 } } }, "eu_cookie_compliance": { "cookie_policy_version": "1.0.0", "popup_enabled": 1, "popup_agreed_enabled": 0, "popup_hide_agreed": 0, "popup_clicking_confirmation": 0, "popup_scrolling_confirmation": 0, "popup_html_info": "\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch5\u003EO site da EqSeed utiliza cookies para melhorar sua navega\u00e7\u00e3o.\u003C\/h5\u003E\n\u003Cp\u003EAo clicar em \u0022aceitar\u0022, voc\u00ea aceita nossa \u003Ca href=\u0022\/politica-privacidade\u0022\u003Epol\u00edtica de privacidade e de cookies\u003C\/a\u003E.\u003C\/p\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022button button-m agree-button eu-cookie-compliance-default-button\u0022\u003EAceitar\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E", "use_mobile_message": false, "mobile_popup_html_info": "\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EBy tapping the Accept button, you agree to us doing so.\u003C\/p\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022button button-m agree-button eu-cookie-compliance-default-button\u0022\u003EAceitar\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n", "mobile_breakpoint": "768", "popup_html_agreed": "\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\n\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button eu-cookie-compliance-hide-button\u0022\u003EHide\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E", "popup_use_bare_css": 1, "popup_height": "auto", "popup_width": 0, "popup_delay": 1000, "popup_link": "\/politica-privacidade", "popup_link_new_window": 1, "popup_position": null, "fixed_top_position": 1, "popup_language": "pt-br", "store_consent": false, "better_support_for_screen_readers": 0, "reload_page": 0, "domain": "", "domain_all_sites": 0, "popup_eu_only_js": 0, "cookie_lifetime": "100", "cookie_session": false, "disagree_do_not_show_popup": 0, "method": "default", "allowed_cookies": "", "withdraw_markup": "\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n", "withdraw_enabled": false, "withdraw_button_on_info_popup": 0, "cookie_categories": [], "cookie_categories_details": [], "enable_save_preferences_button": 1, "cookie_name": "", "cookie_value_disagreed": "0", "cookie_value_agreed_show_thank_you": "1", "cookie_value_agreed": "2", "containing_element": "body", "automatic_cookies_removal": 1 }, "extlink": { "extTarget": "_blank", "extClass": 0, "extLabel": "(link is external)", "extImgClass": 0, "extSubdomains": 0, "extExclude": "https:\/\/www.facebook.com\/dialog\/oauth.*", "extInclude": "", "extCssExclude": "", "extCssExplicit": "", "extAlert": 0, "extAlertText": "This link will take you to an external web site. We are not responsible for their content.", "mailtoClass": 0, "mailtoLabel": "(link sends e-mail)" }, "myPageVar": { "pageVarCat": "secoes", "pageVarUid": null }, "advagg_font_cookie": 1, "advagg_font_no_fout": 0, "advagg_font": { "helvetica-neue": "Helvetica Neue", "armata": "Armata", "times-new-roman": "Times New Roman", "catamaran": "Catamaran", "source-sans-pro": "Source Sans pro" }, "bootstrap": { "anchorsFix": 0, "anchorsSmoothScrolling": 1, "formHasError": 0, "popoverEnabled": 1, "popoverOptions": { "animation": 1, "html": 0, "placement": "right", "selector": "", "trigger": "click", "triggerAutoclose": 1, "title": "", "content": "", "delay": 0, "container": "body" }, "tooltipEnabled": 1, "tooltipOptions": { "animation": 1, "html": 0, "placement": "auto left", "selector": "", "trigger": "hover focus", "delay": 0, "container": "body" } } });
+
+    </script>
+
+    <!-- ========== icones ========== -->
+    <link rel="icon" href="/sites/all/themes/eqseed/meta-icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/sites/all/themes/eqseed/meta-icons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/eqseed/meta-icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/sites/all/themes/eqseed/meta-icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/eqseed/meta-icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/sites/all/themes/eqseed/meta-icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="/sites/all/themes/eqseed/meta-icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="/sites/all/themes/eqseed/meta-icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="/sites/all/themes/eqseed/meta-icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="/sites/all/themes/eqseed/meta-icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="/sites/all/themes/eqseed/meta-icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/sites/all/themes/eqseed/meta-icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/sites/all/themes/eqseed/meta-icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/sites/all/themes/eqseed/meta-icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/sites/all/themes/eqseed/meta-icons/android-chrome-192x192.png"
+        sizes="192x192">
+    <meta name="msapplication-square70x70logo" content="/sites/all/themes/eqseed/meta-icons/smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="/sites/all/themes/eqseed/meta-icons/mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="/sites/all/themes/eqseed/meta-icons/widetile.png" />
+    <meta name="msapplication-square310x310logo" content="/sites/all/themes/eqseed/meta-icons/largetile.png" />
+    <link rel="manifest" href="/sites/all/themes/eqseed/meta-icons/manifest.json">
+    <link rel="mask-icon" href="/sites/all/themes/eqseed/meta-icons/safari-pinned-tab.svg" color="#229322">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-55538 node-type-page i18n-pt-br">
+    <div class="region region-page-top">
+        <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBHC4SR" height="0"
+                width="0" style="display:none;visibility:hidden" title="Google Tag Manager">Google Tag
+                Manager</iframe></noscript>
+    </div>
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3&appId=1449004065390484";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+    <header class="navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="h1-logo">
+                        <a href="/" class="no-border">
+                            <img class="logo-header hidden-xs hidden-sm"
+                                src="/sites/all/themes/eqseed/assets/logo/eqseed-white.svg"
+                                onerror="this.onerror=null; this.src='/sites/all/themes/eqseed/assets/logo/eqseed-white.png'"
+                                alt="EqSeed" />
+                        </a>
+                    </h1>
+                    <!-- mobile triggers -->
+                    <div id="mobile-menu-triggers" class="visible-xs visible-sm height100 overflow-hidden">
+                        <div class="mobile-triggers-block">
+                            <div class="table-vam">
+                                <div class="cell-vam">
+                                    <button type="button" id="mobile-menu-button" class="trigger-nav hamburguer">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar icon-bar-top"></span>
+                                        <span class="icon-bar icon-bar-middle"></span>
+                                        <span class="icon-bar icon-bar-bottom"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mobile-top-bar" class="visible-xs-inline-block visible-sm-inline-block">
+                        <ul class="top-bar-lista">
+                            <li><a class="top-bar-button" href="/user/login">Login</a></li>
+                            <li><a class="button-acesso-mobile" href="/user/register">Cadastre-se</a></li>
+                        </ul>
+                    </div>
+                    <nav id="eqseed-menu" class="menu height100">
+                        <div class="table-vam">
+                            <div class="cell-vam">
+                                <div class="m-pad">
+                                    <div class="mobile-header text-center visible-xs visible-sm">
+                                        <button type="button" class="trigger-nav mobile-close">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar icon-bar-top"></span>
+                                            <span class="icon-bar icon-bar-middle"></span>
+                                            <span class="icon-bar icon-bar-bottom"></span>
+                                        </button>
+                                    </div>
+                                    <ul class="menu-dk-lista">
+                                        <li><a class="link-menu no-border" href="/investir">Investir</a></li>
+                                        <li><a class="link-menu no-border" href="/como-funciona">Como funciona</a></li>
+                                        <li><a class="link-menu no-border" href="/captar">Captar</a></li>
+                                        <li><a class="link-menu no-border" href="http://blog.eqseed.com">Blog</a></li>
+                                        <li><span class="menu-divider"></span></li>
+                                        <li><a class="link-menu no-border" href="/user/login">Login</a></li>
+                                        <li><a class="no-border button-acesso" href="/user/register">Cadastre-se</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="eqseed-investir">
+
+
+
+
+            <div class="region region-content">
+                <section id="block-system-main" class="block block-system clearfix">
+
+
+
+                    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                        <div class="field-items">
+                            <div class="field-item even" property="content:encoded">
+                                <!-- EqSeed.Investir.Hero -->
+                                <article id="investir-hero" class="hero-lg"
+                                    style="background-image:url(/sites/all/themes/eqseed/assets/images/eqseed-investir-hero.jpg);">
+                                    <div class="container-fluid height100">
+                                        <div class="row height100">
+                                            <div
+                                                class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-1 height100">
+                                                <div class="table-vam">
+                                                    <div class="cell-vam">
+                                                        <div class="">
+                                                            <h1 class="copy-hero-bar light c-white pad-b-xs">Confira as
+                                                                oportunidades de investimento em startups, a partir de
+                                                                R$&nbsp;5&nbsp;mil</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- EqSeed.Rodadas de Investimento -->
+                                <article id="investir-rodadas">
+                                    <div class="container-fluid">
+                                        <div
+                                            class="view view-projects view-id-projects view-display-id-block_1 view-dom-id-c2616745493f8c1ccc4989eefce7c8d3">
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <!-- Title & Sort By -->
+                                                    <div class="row">
+
+
+
+
+
+                                                        <div
+                                                            class="col-xxs-12 col-xxs-offset-0 col-xs-10 col-xs-offset-1">
+                                                            <ul class="rodadas-ui clearfix">
+                                                                <li>
+                                                                    <h3 class="title-rodadas-ui">Rodadas de investimento
+                                                                    </h3>
+                                                                </li>
+                                                                <li>
+                                                                    <form class="ctools-auto-submit-full-form"
+                                                                        action="/investir" method="get"
+                                                                        id="views-exposed-form-projects-block-1"
+                                                                        accept-charset="UTF-8">
+                                                                        <div>
+                                                                            <div
+                                                                                class="sort-rodadas-ui views-exposed-form">
+                                                                                <p
+                                                                                    class="title-select-sort-rodadas hidden-xs hidden-sm">
+                                                                                    Ordenar por:</p>
+
+                                                                                <div
+                                                                                    class="form-item form-item-sort-by form-type-select form-group">
+                                                                                    <label class="control-label"
+                                                                                        for="edit-sort-by">Ordenar
+                                                                                        por</label>
+                                                                                    <select
+                                                                                        class="form-control form-select"
+                                                                                        id="edit-sort-by"
+                                                                                        name="sort_by">
+                                                                                        <option
+                                                                                            value="field_start_value"
+                                                                                            selected="selected">Data de
+                                                                                            abertura</option>
+                                                                                        <option
+                                                                                            value="field_target_value">
+                                                                                            Valor de investimento
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="views-exposed-widget views-widget-sort-order">
+                                                                                </div>
+                                                                                <div
+                                                                                    class="views-exposed-widget views-submit-button">
+                                                                                    <button
+                                                                                        class="ctools-use-ajax ctools-auto-submit-click js-hide btn btn-primary form-submit"
+                                                                                        type="submit"
+                                                                                        id="edit-submit-projects"
+                                                                                        name=""
+                                                                                        value="Buscar">Buscar</button>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Cards -->
+                                                    <div class="row">
+                                                        <div
+                                                            class="col-xxs-12 col-xxs-offset-0 col-xs-10 col-xs-offset-1">
+
+                                                            <div class="view-content">
+                                                                <div class="row">
+                                                                    <ul class="cards-list">
+                                                                        <li
+                                                                            class="col-xxs-12 col-xs-6 col-sm-6 col-smd-6 col-md-4 col-xlg-3">
+                                                                            <a href="/user/register?destination=/investir/cargon"
+                                                                                class="no-border investir-card rodada-aberta">
+                                                                                <div class="img-card-frame">
+                                                                                    <div class="img-card"
+                                                                                        style="background-image: url(https://eqseed.com/sites/default/files/styles/proj-tb/public/projects/logo/tombstone_3.png?itok=4zgATNX_)">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="content-card">
+                                                                                    <div class="main-card-pad">
+                                                                                        <div class="top-card clearfix">
+                                                                                            <div class="profile-img-card"
+                                                                                                style="background-image: url(https://eqseed.com/sites/default/files/styles/company-thumbnail/public/images/company/logo_cargon.jpg?itok=r8h4CeTC)">
+                                                                                            </div>
+                                                                                            <ul
+                                                                                                class="category-list-card">
+                                                                                                <li>
+                                                                                                    <p
+                                                                                                        class="category-card">
+                                                                                                        Logística</p>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        <p class="title-card">CargOn
+                                                                                        </p>
+                                                                                        <p class="desc-card">Primeiro
+                                                                                            operador logístico digital
+                                                                                            do mundo</p>
+                                                                                        <div class="bottom-card">
+                                                                                            <p class="status-card">
+                                                                                                Aberta para investir</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="funding-card">
+                                                                                        <div class="clearfix">
+                                                                                            <ul
+                                                                                                class="investimento-card">
+                                                                                                <li class="ic-1">
+                                                                                                    <p
+                                                                                                        class="participacao-card">
+                                                                                                        5,90% <span
+                                                                                                            class="label-participacao-card">participação
+                                                                                                            societária</span>
+                                                                                                    </p>
+                                                                                                </li>
+                                                                                                <li class="ic-2">
+                                                                                                    <p
+                                                                                                        class="em-troca-card">
+                                                                                                        <span
+                                                                                                            class="sr-only">Em
+                                                                                                            troca
+                                                                                                            de</span>
+                                                                                                    </p>
+                                                                                                </li>
+                                                                                                <li class="ic-3">
+                                                                                                    <p
+                                                                                                        class="valor-card">
+                                                                                                        <span
+                                                                                                            class="moeda-card">R$</span>
+                                                                                                        2 800 000 <span
+                                                                                                            class="label-valor-card">investimento</span>
+                                                                                                    </p>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li
+                                                                            class="col-xxs-12 col-xs-6 col-sm-6 col-smd-6 col-md-4 col-xlg-3">
+                                                                            <a href="/user/register?destination=/investir/brota"
+                                                                                class="no-border investir-card rodada-aberta">
+                                                                                <div class="img-card-frame">
+                                                                                    <div class="img-card"
+                                                                                        style="background-image: url(https://eqseed.com/sites/default/files/styles/proj-tb/public/projects/logo/tombstone_2_v2_0.png?itok=Q7O3b7kH)">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="content-card">
+                                                                                    <div class="main-card-pad">
+                                                                                        <div class="top-card clearfix">
+                                                                                            <div class="profile-img-card"
+                                                                                                style="background-image: url(https://eqseed.com/sites/default/files/styles/company-thumbnail/public/images/company/logo_pg_da_rodada_-_brota.jpg?itok=VGTj5pxi)">
+                                                                                            </div>
+                                                                                            <ul
+                                                                                                class="category-list-card">
+                                                                                                <li>
+                                                                                                    <p
+                                                                                                        class="category-card">
+                                                                                                        Foodtech</p>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        <p class="title-card">Brota
+                                                                                            Company</p>
+                                                                                        <p class="desc-card">Agricultura
+                                                                                            Urbana Inteligente para
+                                                                                            alimentar o mundo sem
+                                                                                            destruir o planeta</p>
+                                                                                        <div class="bottom-card">
+                                                                                            <p class="status-card">
+                                                                                                Aberta para investir</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="funding-card">
+                                                                                        <div class="clearfix">
+                                                                                            <ul
+                                                                                                class="investimento-card">
+                                                                                                <li class="ic-1">
+                                                                                                    <p
+                                                                                                        class="participacao-card">
+                                                                                                        10,00% <span
+                                                                                                            class="label-participacao-card">participação
+                                                                                                            societária</span>
+                                                                                                    </p>
+                                                                                                </li>
+                                                                                                <li class="ic-2">
+                                                                                                    <p
+                                                                                                        class="em-troca-card">
+                                                                                                        <span
+                                                                                                            class="sr-only">Em
+                                                                                                            troca
+                                                                                                            de</span>
+                                                                                                    </p>
+                                                                                                </li>
+                                                                                                <li class="ic-3">
+                                                                                                    <p
+                                                                                                        class="valor-card">
+                                                                                                        <span
+                                                                                                            class="moeda-card">R$</span>
+                                                                                                        1 500 000 <span
+                                                                                                            class="label-valor-card">investimento</span>
+                                                                                                    </p>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li
+                                                                            class="col-xxs-12 col-xs-6 col-sm-6 col-smd-6 col-md-4 col-xlg-3">
+                                                                            <a class="no-border captar-card"
+                                                                                href="/captar">
+                                                                                <div class="img-card-frame">
+                                                                                    <div class="img-card"
+                                                                                        style="background-image: url(/sites/all/themes/eqseed/assets/icons/90x90_smart-money.svg); background-size: contain;">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="content-card">
+                                                                                    <div class="main-card-pad">
+                                                                                        <p class="title-card">Quer
+                                                                                            captar investimento para sua
+                                                                                            empresa?</p>
+                                                                                        <div href="/captar"
+                                                                                            class="button button-l">
+                                                                                            Quero captar</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <script type="text/javascript">
+                                                    jQuery('#edit-sort-by').addClass('select-sort-rodadas');
+                                        </script>
+                                        <style type="text/css">
+                                            label[for=edit-sort-by] {
+                                                display: none;
+                                            }
+
+                                            div.form-item-sort-by {
+                                                display: inline-block;
+                                            }
+                                        </style>
+                                    </div>
+                                </article>
+
+
+                                <!-- EqSeed.Investir.Funded -->
+
+                                <article id="home-empresas-financiadas" class="pad-b-xl">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-xxs-12 col-xxs-offset-0 col-xs-10 col-xs-offset-1">
+                                                <ul class="rodadas-ui clearfix">
+                                                    <li>
+                                                        <h3 class="title-rodadas-ui">Rodadas concluídas com sucesso</h3>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <ul class="lista-financiadas-slick">
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Fácil Consulta</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.300.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_2_5.png?itok=uHaohvT5);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">HORUS</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.055.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_2_3.png?itok=tsiHTt2H);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Etag Digital</p>
+                                                        <p class="valor-financiadas c-white">R$ 500.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_2_2.jpg?itok=pzNCrCVe);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">HandOver</p>
+                                                        <p class="valor-financiadas c-white">R$ 910.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_2_2.png?itok=vHkk7RFh);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">SciCrop</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_2_0.jpg?itok=FULOzZ02);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Popai Snack</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.600.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_2_1.png?itok=5BueBKcV);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">EqSeed</p>
+                                                        <p class="valor-financiadas c-white">R$ 5.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_eqseed_2.png?itok=ABWd5si1);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">GTI PLUG</p>
+                                                        <p class="valor-financiadas c-white">R$ 700.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_2_0.png?itok=xHJji0DP);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">TrackerUp</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_2.jpg?itok=leDEQVDG);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Aeroscan</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.300.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_1.png?itok=9G2t-adM);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Edupulses</p>
+                                                        <p class="valor-financiadas c-white">R$ 910.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_2.png?itok=quBvRGWx);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Marlim.co</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/04_-_tombstone.png?itok=8PmGFmla);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Orgânicos in Box</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.500.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/a_tombstone_5.png?itok=lgu1VybF);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Taxcel</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_taxcel.png?itok=lJEUp8aS);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Adimplere</p>
+                                                        <p class="valor-financiadas c-white">R$ 3.075.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_0.png?itok=Mz5HuCZH);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Novidá</p>
+                                                        <p class="valor-financiadas c-white">R$ 875.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_4_1.png?itok=QDhpi1Li);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">MeuPortfolio</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/a_tombstone_2.png?itok=0U7YZFb4);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Kuke</p>
+                                                        <p class="valor-financiadas c-white">R$ 500.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/a_tombstone_3.png?itok=-Zq8_SXY);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Aeroscan</p>
+                                                        <p class="valor-financiadas c-white">R$ 850.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/a_tombstone_1.png?itok=0c2pk0aW);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Globalbot</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/a_tombstone.png?itok=TOJepKEg);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">HORUS</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone.png?itok=5sGOFpUb);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Joycar</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.235.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/thombstone-joycar.jpg?itok=I_cIO92s);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">PROSUMIR</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.475.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/thombstone-prosumir-3.jpg?itok=Gig88doY);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Ulend</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.800.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone-ulend_0.jpg?itok=PAbIxsbA);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Nama</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.500.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone-nama.jpg?itok=lkqR1XFd);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Bynd</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.185.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/eqseed-04_1.jpg?itok=Rpbg6WvF);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Peak Invest</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.200.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone-peak2.jpg?itok=pAdi_B1s);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Mutual </p>
+                                                        <p class="valor-financiadas c-white">R$ 4.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/mutual-cover2.jpg?itok=UOgT1yOt);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Due Laser</p>
+                                                        <p class="valor-financiadas c-white">R$ 500.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_due_com_logo_0.jpg?itok=mqSYKR6j);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">App Renda Fixa</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/bg-video_0.jpg?itok=npa8Xtvm);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">EqSeed</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.500.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/plataforma.jpg?itok=bGm3dBj-);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">IOUU</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.200.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/imagem_tomb_20181008.jpg?itok=5cPfsu80);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">PROSUMIR</p>
+                                                        <p class="valor-financiadas c-white">R$ 500.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/thombstone-prosumir3.jpg?itok=EnylhSBc);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Pegaki</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.200.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/pegaki-thomb.jpg?itok=6cbWctSI);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">3Cariocas</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/3cariocas_tombstone.jpg?itok=814KROPd);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Horus Aeronaves</p>
+                                                        <p class="valor-financiadas c-white">R$ 2.000.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/imagem_tomb.png?itok=73g30lpl);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">GreenAnt</p>
+                                                        <p class="valor-financiadas c-white">R$ 1.600.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/capa_greenant.png?itok=antmahM3);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Kokar</p>
+                                                        <p class="valor-financiadas c-white">R$ 500.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/2.jpg?itok=ZgrFiFKe);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Allugator</p>
+                                                        <p class="valor-financiadas c-white">R$ 360.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombostone_rodada_2_0.png?itok=B_tq3iR4);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">DinDin</p>
+                                                        <p class="valor-financiadas c-white">R$ 600.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/tombstone_dindin_2_20180322.png?itok=e6XVg-o_);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Housed</p>
+                                                        <p class="valor-financiadas c-white">R$ 360.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/housed_sala.png?itok=t51FZ-P0);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Peepi</p>
+                                                        <p class="valor-financiadas c-white">R$ 360.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/capa_eqseed_2.png?itok=YntICF_8);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Pegaki</p>
+                                                        <p class="valor-financiadas c-white">R$ 360.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/whatsapp_image_2017-11-21_at_11.23.30.jpeg?itok=tHW5NZFU);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Due Laser</p>
+                                                        <p class="valor-financiadas c-white">R$ 300.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/due_laser.jpg?itok=8OJzL2MI);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Meu Bistrô</p>
+                                                        <p class="valor-financiadas c-white">R$ 300.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/19253043andrerogemb.jpg?itok=PXpMNOTt);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">IOUU</p>
+                                                        <p class="valor-financiadas c-white">R$ 500.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/iouu_grid.png?itok=bPWNAOn4);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Cotexo</p>
+                                                        <p class="valor-financiadas c-white">R$ 600.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/oficina_m.png?itok=6keivvcS);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Contraktor</p>
+                                                        <p class="valor-financiadas c-white">R$ 450.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/screen_shot_2017-05-15_at_19.33.16.png?itok=RkxyjjOV);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Invoop</p>
+                                                        <p class="valor-financiadas c-white">R$ 250.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/screen_shot_2017-05-05_at_4.46.25_pm.png?itok=PstqddMY);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Prosumir</p>
+                                                        <p class="valor-financiadas c-white">R$ 300.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/3_products.png?itok=J2oTomcs);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Me Passa Aí</p>
+                                                        <p class="valor-financiadas c-white">R$ 250.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/produto_mepassaai.jpg?itok=6XDg7aaP);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-xs-12 col-sm-6 col-md-3">
+                                                    <div class="link-financiadas no-border" data-mh="financiadas">
+                                                        <p class="title-financiadas c-white">Kokar</p>
+                                                        <p class="valor-financiadas c-white">R$ 300.000,00</p>
+                                                        <p class="status-financiadas c-white">Startup investida</p>
+                                                        <div class="img-financiadas"
+                                                            style="background-image:url(https://eqseed.com/sites/default/files/styles/proj-large/public/projects/logo/imagens_eqseed.002.jpg?itok=BreMt4Mh);">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <script>
+var dataLayer = window.dataLayer || [];
+                                    dataLayer.push({
+                                        'event': 'allPages',
+                                        'pageCategory': 'secoes',
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+                </section> <!-- /.block -->
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer class="pad-t-l pad-b-l">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="row pad-b-sm">
+                        <div class="col-xs-12 col-md-4 col-lg-6">
+                            <img class="logo-footer" src="/sites/all/themes/eqseed/assets/logo/eqseed-3-grey.svg"
+                                onerror="this.onerror=null; this.src='/sites/all/themes/eqseed/assets/logo/eqseed-3-grey.png'"
+                                alt="EqSeed Logo">
+                        </div>
+                        <div class="col-xs-12 col-md-8 col-lg-6">
+                            <div class="row">
+                                <ul class="sitemap">
+                                    <li class="col-xs-12 col-sm-4">
+                                        <p class="title-sitemap">A EqSeed</p>
+                                        <ul class="sub-sitemap">
+                                            <li><a class="link-sitemap" href="/conteudo-didatico">Conteúdo Didático</a>
+                                            </li>
+                                            <li><a class="link-sitemap"
+                                                    href="https://materiais.eqseed.com/sobre-nos">Sobre nós</a></li>
+                                            <li><a class="link-sitemap" href="http://blog.eqseed.com">Blog</a></li>
+                                            <li><a class="link-sitemap"
+                                                    href="http://blog.eqseed.com/imprensa">Imprensa</a></li>
+                                            <li><a class="link-sitemap"
+                                                    href="https://materiais.eqseed.com/talentos-eqseed">Carreiras</a>
+                                            </li>
+                                            <li><a class="link-sitemap" href="/contact">Contato</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-xs-12 col-sm-4">
+                                        <p class="title-sitemap">Seções</p>
+                                        <ul class="sub-sitemap">
+                                            <li><a class="link-sitemap" href="/investir">Investir</a></li>
+                                            <li><a class="link-sitemap" href="/como-funciona">Como funciona</a></li>
+                                            <li><a class="link-sitemap" href="/captar">Captar</a></li>
+                                            <li><a class="link-sitemap" href="/faq">FAQ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-xs-12 col-sm-4">
+                                        <p class="title-sitemap">Legal</p>
+                                        <ul class="sub-sitemap">
+                                            <li><a class="link-sitemap"
+                                                    href="https://eqseed.com/sites/default/files/eqseed-regras-gerais.pdf">Regras
+                                                    Gerais</a></li>
+                                            <li><a class="link-sitemap" href="/termos-servico">Termos de Serviço</a>
+                                            </li>
+                                            <li><a class="link-sitemap" href="/politica-privacidade">Política de
+                                                    privacidade</a></li>
+                                            <li><a class="link-sitemap" href="/aviso-risco">Aviso de Risco</a></li>
+                                            <li><a class="link-sitemap" href="/relatorios-cvm">Relatórios CVM</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pad-b-sm">
+                        <div class="col-xs-12">
+                            <p class="p-aviso">Qualquer investimento em pequenas empresas (startups) envolve riscos
+                                financeiros e desafios significativos. Investimentos em startups devem compor apenas uma
+                                pequena parte de uma carteira diversificada de investimentos. Você correrá o risco de
+                                perder parte ou todo o dinheiro investido em empresas através da plataforma EqSeed. Não
+                                há qualquer garantia de retorno do investimento efetuado. Somente invista em negócios
+                                publicados na plataforma EqSeed se você possui conhecimento suficiente para entender
+                                esses riscos e para tomar suas próprias decisões de investimento. Veja o nosso <a
+                                    href="/aviso-risco">Aviso de Risco</a> antes de tomar uma decisão de
+                                investimento.<br><br>
+
+                                <span style="display: block; margin-bottom: 5px;">As sociedades empresárias de pequeno
+                                    porte e as ofertas apresentadas nesta plataforma estão automaticamente dispensadas
+                                    de registro pela Comissão de Valores Mobiliários - CVM.</span>
+                                <span style="display: block; margin-bottom: 5px;">A CVM não analisa previamente as
+                                    ofertas.</span>
+                                <span style="display: block; margin-bottom: 5px;">As ofertas realizadas não implicam
+                                    por parte da CVM a garantia da veracidade das informações prestadas, de
+                                    adequação à legislação vigente ou julgamento sobre a qualidade da sociedade
+                                    empresária de pequeno porte.</span>
+                                <span style="display: block; margin-bottom: 5px;">Antes de aceitar uma oferta leia com
+                                    atenção as informações essenciais da oferta, em especial a seção de alertas
+                                    sobre riscos.</span>
+
+                                <br>A EqSeed disponibiliza canal de comunicação, por meio do endereço
+                                juridico@eqseed.com, no qual o seu encarregado pela proteção de dados pessoais receberá
+                                quaisquer requisições, solicitações, comunicações e/ou manifestações dos titulares de
+                                dados pessoais para exercício dos direitos estipulados na Lei 13.709/2018 (Lei Geral de
+                                Proteção de Dados), em consonância a sua <a href="/politica-privacidade">Política de
+                                    Privacidade e de Cookies</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 col-md-push-6">
+                            <ul class="social-footer">
+                                <li><a class="no-border" href="https://www.linkedin.com/company/eqseed"><span
+                                            class="icon-c-s"><svg class="icon icon-linkedin">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    xlink:href="#icon-linkedin"></use>
+                                            </svg></span></a></li>
+                                <li><a class="no-border" href="https://www.facebook.com/eqseed"><span
+                                            class="icon-c-s"><svg class="icon icon-facebook">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    xlink:href="#icon-facebook"></use>
+                                            </svg></span></a></li>
+                                <li><a class="no-border" href="https://twitter.com/eqseed"><span class="icon-c-s"><svg
+                                                class="icon icon-twitter">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    xlink:href="#icon-twitter"></use>
+                                            </svg></span></a></li>
+                                <li><a class="no-border" href="http://blog.eqseed.com/" title="EqSeed Blog"
+                                        target="_blank"><span class="icon-c-s"><svg class="icon icon-blog">
+                                                <use xlink:href="#icon-blog"></use>
+                                            </svg></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-md-pull-6">
+                            <p class="p-copy">Copyright 2015-2022 EqSeed, Ltda (CNPJ: 21.839.542/0001-22). Todos os
+                                direitos reservados.</p>
+                            <p class="p-credits">EqSeed é uma plataforma de investimento <a
+                                    href="http://www.cvm.gov.br/menu/regulados/plataformas_de_crowdfunding/Plataformas-eletronicas-de-investimento-participativo-crowdfunding.html">autorizada
+                                    pela Comissão de Valores Mobiliários (CVM)</a></p>
+                        </div>
+                    </div>
+                    <div class="row pad-t-xs">
+                        <div class="col-xs-12">
+                            <a class="no-border"
+                                href="http://www.cvm.gov.br/menu/regulados/plataformas_de_crowdfunding/Plataformas-eletronicas-de-investimento-participativo-crowdfunding.html"><img
+                                    src="/sites/all/themes/eqseed/assets/logo/logo_cvm.png"
+                                    onerror="this.onerror=null; this.src='/sites/all/themes/eqseed/assets/logo/eqseed-3-grey.png'"
+                                    alt="EqSeed é uma plataforma de investimento autorizada pela Comissão de Valores Mobiliários (CVM)"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <symbol id="icon-blog" viewBox="0 0 32 32">
+                <title>blog</title>
+                <path
+                    d="M22.8 19c-1.2 0-2.1 0.1-3 0.4v2.2c0.8-0.4 1.9-0.5 3-0.5s2.1 0.1 3 0.2v-2.2c-0.9 0.1-1.8-0.1-3-0.1z">
+                </path>
+                <path
+                    d="M9 19.2c-1.2 0-2.1 0.1-3 0.2v2.2c0.8-0.1 1.9-0.2 3-0.2s2.2 0.2 3 0.5v-2.2c-0.9-0.4-1.8-0.7-3-0.5z">
+                </path>
+                <path
+                    d="M25.8 9.9v-2.2c-0.9-0.1-1.9-0.2-3-0.2-1.2 0-2.1 0.1-3 0.4v2.1c0.8-0.4 1.9-0.5 3-0.5 1.2 0.2 2.1 0.2 3 0.4z">
+                </path>
+                <path
+                    d="M12.1 10.2v-2.3c-0.9-0.2-1.9-0.4-3-0.4s-2.2 0.2-3.1 0.3v2.2c0.8-0.1 1.9-0.2 3-0.2 1.2-0.1 2.3 0.1 3.1 0.4z">
+                </path>
+                <path
+                    d="M25.9 15.6v-2.2c-0.9-0.1-1.9-0.2-3-0.2s-2.1 0.1-3 0.4v2.2c0.8-0.4 1.9-0.5 3-0.5 1.1 0.1 2 0.2 3 0.3z">
+                </path>
+                <path
+                    d="M12.1 16v-2.2c-0.9-0.2-1.9-0.4-3-0.4s-2.1 0.1-3 0.2v2.2c0.8-0.1 1.9-0.2 3-0.2 1.1-0.1 2.2 0 3 0.4z">
+                </path>
+                <path
+                    d="M31.4 3.7c0 0-3.6-2.3-8.5-2.3-3.4 0-5.7 1.6-6.9 2.8-1.3-1.2-3.6-2.8-7-2.8-4.9 0-8.5 2.5-8.5 2.5l0.1 24.7c0 0.7 0.8 1.2 1.5 0.7 1.3-0.9 3.5-2.1 7-2.1 3.4 0 5.3 1.8 6.2 3.2 0.4 0.5 1.2 0.5 1.5 0 0.9-1.3 2.8-3.2 6.1-3.2 3.5 0 5.7 1.1 7 2.1 0.6 0.5 1.5 0 1.5-0.7v-24.9zM9 24.2c-2.5 0-4.3 0.5-5.6 0.9v-19.5c0.8-0.5 2.7-1.2 5.6-1.2 2.7 0 4.6 1.3 5.6 2.6l0.1 19c-1.3-1-3.2-1.8-5.7-1.8zM22.8 24.1c-2.5 0-4.3 0.8-5.6 1.8v-19c1.1-1.2 2.8-2.6 5.5-2.6 2.9 0 4.8 0.7 5.6 1.2l0.2 19.5c-1.3-0.5-3.2-0.9-5.7-0.9z">
+                </path>
+            </symbol>
+            <symbol id="icon-facebook" viewBox="0 0 32 32">
+                <title>facebook</title>
+                <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+            </symbol>
+            <symbol id="icon-twitter" viewBox="0 0 32 32">
+                <title>twitter</title>
+                <path
+                    d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+                </path>
+            </symbol>
+            <symbol id="icon-linkedin" viewBox="0 0 32 32">
+                <title>linkedin</title>
+                <path
+                    d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z">
+                </path>
+                <path d="M2 12h6v18h-6v-18z"></path>
+                <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+            </symbol>
+        </defs>
+    </svg>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__v_4yJHVtE6RUu6yqhWqVJhN8cT82FDxs_Va_i0KPQGA__VUs2gJxak1y81kUpE3WqLc39quIP947zxBXlR7fnhjE__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"
+        defer="defer"></script>
+    <script type="text/javascript"
+        src="/sites/default/files/advagg_js/js__i11V-7AETPhfL9YzRpXBpECwVkYyQ_ahu2eHxES_mK0__S79mhsO6q7fWONLNt9XSEZx-JmiQeAEtuPkuVxIEjpY__16nqogNB7XViCmFaxiyruesCVXJRoIy0xcc4ygm5ZLo.js"></script>
+    <script type="text/javascript">
+< !--//-->
+    < ![CDATA[//><!--
+                window.eu_cookie_compliance_cookie_name = "";
+//--><!]]>
+    </script>
+    <script type="text/javascript">
+< !--//-->
+    < ![CDATA[//><!--
+        jQuery(document).ready(function () {
+            var dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'event': 'allPages',
+                'userId': Drupal.settings.myPageVar.pageVarUid,
+                'pageCategory': Drupal.settings.myPageVar.pageVarCat,
+            });
+        });
+//--><!]]>
+    </script>
+
+    <script>
+    jQuery(document).ready(function () {
+        (new Image()).src = "//googleads.g.doubleclick.net/pagead/viewthroughconversion/941678016/?value=0&guid=ON&script=0";
+        if (jQuery('.alert-success.messages, div:contains("Favor conferir e seguir as instruções para continuar com a") ').length == 1) {
+            (new Image()).src = "//www.googleadservices.com/pagead/conversion/941678016/?label=P49JCN_SwmAQwLuDwQM&guid=ON&script=0";
+        }
+    });
+    </script>
+
+    <script
+        type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "licenseKey": "a41effcae8", "applicationID": "7080079", "transactionName": "ZV1RYUtSCkRRBRVfDFwXclZNWgtZHwgOUgZtSFJSXGwSXlUR", "queueTime": 0, "applicationTime": 566, "atts": "SRpSFwNIGUo=", "errorBeacon": "bam.nr-data.net", "agent": "" }</script>
+</body>
+<script type="text/javascript"> _linkedin_data_partner_id = "162617"; </script>
+<script
+    type="text/javascript"> (function () { var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript"; b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s); })(); </script>
+<noscript> <img height="1" width="1" style="display:none;" alt=""
+        src="https://dc.ads.linkedin.com/collect/?pid=162617&fmt=gif" /> </noscript>
+
+<script type="text/javascript" async
+    src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/bc75e350-bea4-45ea-ac6a-5a66dd2067de-loader.js"></script>
+
+
+</html>
