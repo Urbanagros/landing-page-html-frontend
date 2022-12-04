@@ -1,0 +1,7 @@
+{
+  "name": "urbanagros",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

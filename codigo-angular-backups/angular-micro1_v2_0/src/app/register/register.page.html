@@ -1,0 +1,55 @@
+
+
+<ion-content>
+  <div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <div class="card">
+                <form [formGroup]="userForm" class="form-card" (ngSubmit)="submitUserForm(userForm.value)">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3">Nome<span class="text-danger"> *</span>
+                            </label> 
+                            <input type="text" id="fname" name="firstName" placeholder="Enter your first name"  formControlName="firstName" > 
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3">Sobrenome<span class="text-danger"> *</span>
+                            </label>
+                             <input type="text" id="lname" name="lastName" placeholder="Enter your last name" formControlName="lastName" >
+                            </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> 
+                          <input type="text" id="email" name="email" placeholder="" formControlName="mobileNumber" onblur="validate(3)"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3">Telefone<span class="text-danger"> *</span>
+                            </label> 
+                            <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)"> 
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3">CPF<span class="text-danger"> *</span>
+                            </label> 
+                          <input type="text" id="email" name="cpf" placeholder=""  formControlName="cpf" > 
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Escolaridade</option>
+                                <option value="1">Superior Completo</option>
+                                <option value="2">Sem escolaridade</option>
+                                <option value="3">Ensino médio</option>
+                              </select>
+                        </div>                        
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="form-group col-sm-6"> 
+                          <button type="submit" class="btn-block btn-primary">Cadastre-se</button> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</ion-content>

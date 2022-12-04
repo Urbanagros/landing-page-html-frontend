@@ -1,0 +1,35 @@
+.example-card{
+    width: 500px;
+  }
+  /* Structure */
+  .example-container {
+    position: relative;
+    padding: 3px;
+    background: #f2f2f2;
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 60%;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+
+  .button-row {
+    margin: 10px 0;
+  }
+  .mat-flat-button {
+    margin: 5px;
+  }
+  .center{
+    width: 75%;
+    margin: 2px auto;
+  }
+  .main-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

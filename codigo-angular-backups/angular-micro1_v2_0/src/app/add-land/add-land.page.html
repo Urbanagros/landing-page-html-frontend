@@ -1,0 +1,68 @@
+
+
+<ion-content>
+  <div class="example-container ">
+    <div class="example-loading-shade" *ngIf="isLoadingResults">
+        <span *ngIf="isLoadingResults">Loading</span>
+    </div>
+    <div class="main-div">
+        <div class="example-card">
+            <div>
+                <div>Adicionar terreno</div>
+            </div>
+            <form [formGroup]="landForm" (ngSubmit)="submitUserForm(landForm.value)">
+
+                <div class="mb-3 mt-3">
+                    <label for="text" class="form-label">Descrição:</label>
+                    <input type="text" class="form-control" id="email" placeholder="Name" formControlName="name">
+                    <div>
+                        <span *ngIf="!landForm.get('name')?.valid && landForm.get('name')?.touched">Please
+                            enter Name</span>
+                    </div>
+                </div>
+ 
+                <div class="mb-3 mt-3">
+                    <label for="text" class="form-label">Endereço:</label>
+                    <input  placeholder="Address"  class="form-control" formControlName="address" >
+                    <div>
+                        <span *ngIf="!landForm.get('address')?.valid && landForm.get('address')?.touched">Please
+                            Endereço</span>
+                    </div>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="text" class="form-label">Cidade:</label>
+                    <input placeholder="City"  class="form-control"  formControlName="city" >
+                    <div>
+                        <span *ngIf="!landForm.get('city')?.valid && landForm.get('city')?.touched">Please
+                            enter City</span>
+                    </div>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="text" class="form-label">Estado:</label>
+                    <input  placeholder="Estate"  class="form-control"  formControlName="state" >
+                    <div>
+                        <span *ngIf="!landForm.get('state')?.valid && landForm.get('state')?.touched">Please
+                            enter Estate</span>
+                    </div>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <label for="text" class="form-label">CEP:</label>
+                    <input placeholder="Zip" class="form-control" formControlName="zipcode" >
+                    <div>
+                        <span *ngIf="!landForm.get('zipcode')?.valid && landForm.get('zipcode')?.touched">Please
+                            CEP</span>
+                    </div>
+                </div>
+                <div class="button-row">
+                    <button type="submit" [disabled]="!landForm.valid" class="btn btn-primary">
+                        Cadastrar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</ion-content>
